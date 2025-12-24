@@ -100,7 +100,7 @@ moveSanta();
 
 // Thêm hiệu ứng quà rơi
 function createGift() {
-  const gift = document.createElmẹ iuent('div');
+  const gift = document.createElement('div');
   gift.classList.add('gift');
 
   // Vị trí ngẫu nhiên theo chiều ngang
