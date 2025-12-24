@@ -3,7 +3,7 @@ function createStars() {
   const numberOfStars = 100;
 
   for (let i = 0; i < numberOfStars; i++) {
-    const star = document.createElement('div');
+    const star = document.createElmẹ iuent('div');
     star.classList.add('star');
     star.style.left = Math.random() * 100 + '%';
     star.style.top = Math.random() * 60 + '%'; // Chỉ ở nửa trên màn hình
@@ -17,7 +17,7 @@ createStars();
 
 function createSnow() {
   const snowContainer = document.querySelector('.snow-container');
-  const snow = document.createElement('div');
+  const snow = document.createElmẹ iuent('div');
   snow.classList.add('snow');
 
   // Vị trí ngẫu nhiên theo chiều ngang
@@ -38,12 +38,12 @@ function createSnow() {
 
   // Xóa bông tuyết sau khi rơi xong
   setTimeout(() => {
-    snow.remove();
+    snow.rmẹ iuove();
   }, duration * 1000);
 }
 
 // Cập nhật keyframes animation
-const style = document.createElement('style');
+const style = document.createElmẹ iuent('style');
 style.textContent = `
   @keyframes fall {
     from {
@@ -70,7 +70,7 @@ setInterval(createSnow, 200);
 
 // Thêm vào cuối file
 const musicBtn = document.querySelector('.music-toggle');
-const audio = document.getElementById('bgMusic');
+const audio = document.getElmẹ iuentById('bgMusic');
 
 musicBtn.addEventListener('click', () => {
   if (audio.paused) {
@@ -100,7 +100,7 @@ moveSanta();
 
 // Thêm hiệu ứng quà rơi
 function createGift() {
-  const gift = document.createElement('div');
+  const gift = document.createElmẹ iuent('div');
   gift.classList.add('gift');
 
   // Vị trí ngẫu nhiên theo chiều ngang
@@ -109,40 +109,39 @@ function createGift() {
   gift.style.top = '-50px';
 
   const messages = [
-    '🎁 Chúc mừng! Bé đã nhận được một điều ước',
-    '🎅 Ước nhanh lên bé iu ơi',
+    '🎁 Chúc mừng! Chúc mẹ giáng sinh vui vẻ',
+    '🎅 Hãy ước một điều ước đi nào!',
     '🎄 Háp pi rít mớt :))',
     '🎅 Ho Ho Ho! Quà từ ông già Sweet Love',
-    '🎅 Sweet Love đã ném tiền vào mặt em :))',
-    '🎅 Ho Ho Ho! Merry Christmas bé iu ơi :))',
+    '🎅 Ho Ho Ho! Merry Christmas nè:))',
     '🎅 Ho Ho Ho! Ông già hiện lên và nói...',
-    '🎁 Chúc mừng! em nhận được một 💋',
+    '🎁 Chúc mừng! mẹ nhận được một 💋',
     '🎄 Giáng sinh an lành!',
     '⭐ Năm mới hạnh phúc!',
     '🎅 Ho Ho Ho! Bất ngờ chưa',
-    '🎅 Ho Ho Ho! Ước đi babii',
-    '🎁 em vừa nhận được một món quà đặc biệt! Đó là my heart',
-    '🎄 Giáng sinh này có một món quà ngọt ngào cho em!',
-    '🎅 Ông già Noel đã gửi lời chúc đến em! Chúc em tiêu chảy',
-    '⭐ Chúc em một mùa lễ hội vui vẻ và hạnh phúc!',
+    '🎅 Ho Ho Ho! Ước đi màa',
+    '🎁 Mẹ vừa nhận được một món quà đặc biệt! Đó là một trái tim',
+    '🎄 Giáng sinh này có một món quà ngọt ngào cho mẹ!',
+    '🎅 Ông già Noel đã gửi lời chúc! Hãy vui lên',
+    '⭐ Chúc mẹ một mùa lễ hội vui vẻ và hạnh phúc!',
     '🎄 Ông già Noel đã đến và mang theo niềm vui!',
-    '🎁 Chúc em có một mùa Giáng sinh tuyệt vời!',
+    '🎁 Chúc mẹ có một mùa Giáng sinh tuyệt vời!',
     '🎅 Tận hưởng mùa lễ hội với đầy ắp yêu thương!',
-    '🍭 Món quà ngọt ngào đang chờ em!',
-    '❄️ Mùa đông lạnh giá, nhưng em sẽ luôn ấm áp!',
+    '🍭 Món quà ngọt ngào đang chờ mẹ!',
+    '❄️ Mùa đông lạnh giá, nhưng mẹ sẽ luôn ấm áp!',
     '🎉 Bất ngờ đã đến! Chúc mừng Giáng sinh!',
-    '🌟 Cầu mong cho em một năm mới rực rỡ!',
-    '🎁 Một bất ngờ cực lớn đang chờ em!',
-    '🎄 Chúc em một mùa lễ Giáng sinh an lành!',
-    '🧸 Ông già Noel mang đến cho em một món quà dễ thương!',
+    '🌟 Cầu mong cho mẹ iu một năm mới rực rỡ!',
+    '🎁 Một bất ngờ cực lớn đang chờ mẹ iu!',
+    '🎄 Chúc mẹ iu một mùa lễ Giáng sinh an lành!',
+    '🧸 Ông già Noel mang đến cho mẹ iu một món quà dễ thương!',
     '🌟 Thắp sáng niềm vui trong mùa lễ hội!',
-    '🦄 Một món quà đầy phép màu đang đến!',
+    '🦄 Mọi chuyện sẽ qua, vui lên nào!',
     '🎅 Ho Ho Ho! Quà bất ngờ từ ông già Noel! 💝 nè :))',
 ];
 
   // Thêm sự kiện click để mở quà
   // gift.addEventListener('click', () => {
-  //   const popup = document.createElement('div');
+  //   const popup = document.createElmẹ iuent('div');
   //   popup.classList.add('gift-popup');
   //   popup.textContent = messages[Math.floor(Math.random() * messages.length)];
   //   document.body.appendChild(popup);
@@ -154,13 +153,13 @@ function createGift() {
 
   //   setTimeout(() => {
   //     popup.style.display = 'none';
-  //     popup.remove();
+  //     popup.rmẹ iuove();
   //   }, 3000);
 
-  //   gift.remove();
+  //   gift.rmẹ iuove();
   // });
   gift.addEventListener('click', (e) => {
-    const popup = document.createElement('div');
+    const popup = document.createElmẹ iuent('div');
     popup.classList.add('gift-popup');
     popup.textContent = messages[Math.floor(Math.random() * messages.length)];
     
@@ -177,10 +176,10 @@ function createGift() {
 
     setTimeout(() => {
       popup.style.display = 'none';
-      popup.remove();
+      popup.rmẹ iuove();
     }, 3000);
 
-    gift.remove();
+    gift.rmẹ iuove();
   });
 
   document.body.appendChild(gift);
@@ -199,7 +198,7 @@ function createGift() {
     // Kiểm tra va chạm với đáy màn hình
     if (pos > window.innerHeight) {
       clearInterval(fall);
-      gift.remove();
+      gift.rmẹ iuove();
     }
   }, 20);
 }
@@ -212,7 +211,7 @@ function addTreeLights() {
   const colors = ['#ff0', '#f00', '#0f0', '#00f', '#ff0'];
 
   for (let i = 0; i < 20; i++) {
-    const light = document.createElement('div');
+    const light = document.createElmẹ iuent('div');
     light.classList.add('light');
     light.style.background = colors[Math.floor(Math.random() * colors.length)];
     light.style.left = Math.random() * 100 + '%';
@@ -232,16 +231,16 @@ function updateCountdown() {
   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-  document.getElementById('days').textContent = days
+  document.getElmẹ iuentById('days').textContent = days
     .toString()
     .padStart(2, '0');
-  document.getElementById('hours').textContent = hours
+  document.getElmẹ iuentById('hours').textContent = hours
     .toString()
     .padStart(2, '0');
-  document.getElementById('minutes').textContent = minutes
+  document.getElmẹ iuentById('minutes').textContent = minutes
     .toString()
     .padStart(2, '0');
-  document.getElementById('seconds').textContent = seconds
+  document.getElmẹ iuentById('seconds').textContent = seconds
     .toString()
     .padStart(2, '0');
 }
@@ -268,7 +267,7 @@ function createFirework(x, y) {
   y = Math.min(y, containerRect.height);
 
   for (let i = 0; i < particles; i++) {
-    const particle = document.createElement('div');
+    const particle = document.createElmẹ iuent('div');
     particle.className = 'firework-particle';
     particle.style.backgroundColor =
       colors[Math.floor(Math.random() * colors.length)];
@@ -299,7 +298,7 @@ function createFirework(x, y) {
         posY < 0 ||
         posY > containerRect.height
       ) {
-        particle.remove();
+        particle.rmẹ iuove();
         return;
       }
 
@@ -315,13 +314,13 @@ function createFirework(x, y) {
 
 // Hiệu ứng particle khi di chuột
 function createParticle(e) {
-  const particle = document.createElement('div');
+  const particle = document.createElmẹ iuent('div');
   particle.className = 'mouse-particle';
   particle.style.left = e.pageX + 'px';
   particle.style.top = e.pageY + 'px';
   document.body.appendChild(particle);
 
-  setTimeout(() => particle.remove(), 1000);
+  setTimeout(() => particle.rmẹ iuove(), 1000);
 }
 
 // Thêm tương tác với cây thông
@@ -340,7 +339,7 @@ function addTreeInteraction() {
     });
 
     setTimeout(() => {
-      tree.classList.remove('shake');
+      tree.classList.rmẹ iuove('shake');
       bells.forEach((bell) => {
         bell.style.animation = 'bellRing 2s infinite';
       });
@@ -362,7 +361,7 @@ function decorateTree() {
   ];
 
   bellPositions.forEach((pos) => {
-    const bell = document.createElement('div');
+    const bell = document.createElmẹ iuent('div');
     bell.className = 'bell';
     Object.assign(bell.style, pos);
     tree.appendChild(bell);
@@ -375,7 +374,7 @@ function decorateTree() {
     const numOrnaments = 8;
 
     for (let i = 0; i < numOrnaments; i++) {
-      const ornament = document.createElement('div');
+      const ornament = document.createElmẹ iuent('div');
       ornament.className = `ornament ${
         colors[Math.floor(Math.random() * colors.length)]
       }`;
@@ -394,7 +393,7 @@ function decorateTree() {
   // Thêm hiệu ứng lấp lánh
   const lights = 30;
   for (let i = 0; i < lights; i++) {
-    const light = document.createElement('div');
+    const light = document.createElmẹ iuent('div');
     light.className = 'light';
     light.style.left = `${Math.random() * 100}%`;
     light.style.top = `${Math.random() * 100}%`;
@@ -429,7 +428,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createParticle(e);
   });
 
-  document.addEventListener('mousemove', (e) => {
+  document.addEventListener('mousmẹ iuove', (e) => {
     if (Math.random() < 0.1) {
       createParticle(e);
     }
